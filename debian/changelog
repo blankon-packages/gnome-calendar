@@ -1,0 +1,94 @@
+gnome-calendar (3.20.2-1+b1blankon1) tambora; urgency=medium
+
+  * BlankOn not use gnome-shell, gnome-calendar crash because check gnome-shell environment
+    - Add dont_require_schemas.patch to fix on BlankOn 
+
+ -- dotovr <dotovr@preko>  Tue, 28 Jun 2016 23:13:31 +0700
+
+gnome-calendar (3.20.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Refresh patches.
+  * Bump Standards-Version to 3.9.8.
+
+ -- Michael Biebl <biebl@debian.org>  Tue, 17 May 2016 18:43:28 +0200
+
+gnome-calendar (3.20.1-2) unstable; urgency=medium
+
+  * debian/patches/0001-Hide-GOA-sources-on-Unity.patch: Fix Unity detection
+    for starting GOA.
+
+ -- Iain Lane <laney@debian.org>  Wed, 11 May 2016 13:19:06 +0100
+
+gnome-calendar (3.20.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Drop uploaders.mk from debian/rules as this breaks the clean target with
+    dh. Instead use the gnome dh addon which updates debian/control via
+    dh_gnome_clean.
+  * Upload to unstable.
+
+ -- Michael Biebl <biebl@debian.org>  Sun, 17 Apr 2016 18:17:07 +0200
+
+gnome-calendar (3.19.92-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Update unity patches to apply again:
+    - 0001-Hide-GOA-sources-on-Unity.patch
+    - 0002-Spawn-Ubuntu-s-credentials-panel-instead-of-the-GOA-.patch
+  * Bump gtk+ build-dependency to 3.19.12~
+    - uses new API, e.g. gtk_widget_class_set_css_name
+  * Bump Standards-Version to 3.9.7
+
+ -- Andreas Henriksson <andreas@fatal.se>  Thu, 17 Mar 2016 11:32:42 +0100
+
+gnome-calendar (3.18.3-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Thu, 17 Mar 2016 11:26:01 +0100
+
+gnome-calendar (3.18.2.1-2) unstable; urgency=medium
+
+  * Add a Recommends on evolution-data-server (or -online-accounts for the
+    benefit of Ubuntu) so that we have credential modules available.
+  * d/p/0001-Hide-GOA-sources-on-Unity.patch,
+    d/p/0002-Spawn-Ubuntu-s-credentials-panel-instead-of-the-GOA-.patch: Take
+    some patches from upstream bug #761259 to resolve some integration issues
+    in Unity. (LP: #1525861)
+
+ -- Iain Lane <laney@debian.org>  Fri, 12 Feb 2016 16:19:55 +0000
+
+gnome-calendar (3.18.2.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Michael Biebl <biebl@debian.org>  Mon, 04 Jan 2016 20:50:15 +0100
+
+gnome-calendar (3.18.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Michael Biebl <biebl@debian.org>  Wed, 23 Dec 2015 10:49:55 +0100
+
+gnome-calendar (3.18.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Michael Biebl <biebl@debian.org>  Sat, 17 Oct 2015 22:14:28 +0200
+
+gnome-calendar (3.18.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update build-dependencies according to configure.ac changes:
+    - bump evolution-data-server to >= 3.17.1
+    - add goa >= 3.2.0
+    - (already done: bump libical to >= 1.0)
+
+ -- Andreas Henriksson <andreas@fatal.se>  Sun, 11 Oct 2015 12:05:06 +0200
+
+gnome-calendar (3.16.2-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Andreas Henriksson <andreas@fatal.se>  Wed, 19 Aug 2015 19:36:17 +0200
